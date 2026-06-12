@@ -68,8 +68,6 @@ All core data endpoints require valid **JWT Authentication**. Secure your reques
 ## ⚙️ Quick Start
 
 ### 1. Clone & Set Up Environment
-
-```bash
 git clone https://github.com/RuchikaN2801/Sales-Forecasting-Business-Intelligence-Platform.git
 cd Sales-Forecasting-Business-Intelligence-Platform
 
@@ -77,24 +75,13 @@ cd Sales-Forecasting-Business-Intelligence-Platform
 python -m venv venv
 source venv/bin/activate  # On Windows use: venv\Scripts\activate
 
-
-
 ### 2. Install Dependencies
-
 pip install -r requirements.txt
 
-
 ### 3. Initialize Database & Admin
-
 python manage.py migrate
 python manage.py createsuperuser  # Access the Django Admin Panel here
 
-
 ### 4. Run the Server
-
-```bash
 python manage.py runserver
 
-```
-
-The REST API will now be accessible locally at `http://127.0.0.1:8000/`.
