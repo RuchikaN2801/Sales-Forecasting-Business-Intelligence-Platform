@@ -67,21 +67,21 @@ All core data endpoints require valid **JWT Authentication**. Secure your reques
 
 ## ⚙️ Quick Start
 
-### 1. Clone & Set Up Environment
+1. Clone & Set Up Environment
 git clone https://github.com/RuchikaN2801/Sales-Forecasting-Business-Intelligence-Platform.git
 cd Sales-Forecasting-Business-Intelligence-Platform
 
-# Create virtual environment
+1.1 Create virtual environment
 python -m venv venv
 source venv/bin/activate  # On Windows use: venv\Scripts\activate
 
-### 2. Install Dependencies
+2. Install Dependencies
 pip install -r requirements.txt
 
-### 3. Initialize Database & Admin
+3. Initialize Database & Admin
 python manage.py migrate
 python manage.py createsuperuser  # Access the Django Admin Panel here
 
-### 4. Run the Server
+4. Run the Server
 python manage.py runserver
 
