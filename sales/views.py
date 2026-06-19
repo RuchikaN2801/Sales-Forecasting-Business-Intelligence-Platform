@@ -11,6 +11,8 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from xgboost import XGBRegressor
 import numpy as np
+from rest_framework.permissions import IsAuthenticated
+
 
 from .models import SalesData
 from .serializers import SalesDataSerializer, CSVUploadSerializer
@@ -25,6 +27,8 @@ class SalesListCreateView(generics.ListCreateAPIView):
 
 
 class CSVUploadView(APIView):
+
+    permission_classes = [IsAuthenticated]
     def get(self, request):
         return Response({
             "message": "Use POST request with CSV file"
@@ -60,6 +64,8 @@ class CSVUploadView(APIView):
             status=status.HTTP_400_BAD_REQUEST
         )
 class AnalyticsView(APIView):
+
+    permission_classes = [IsAuthenticated]
 
     def get(self, request):
 
@@ -125,6 +131,8 @@ class RevenueTrendView(APIView):
         })    
 class ForecastView(APIView):
 
+    permission_classes = [IsAuthenticated]
+
     def get(self, request):
 
         data = SalesData.objects.all().values(
@@ -161,6 +169,8 @@ class ForecastView(APIView):
             )
         )
 class XGBoostForecastView(APIView):
+
+    permission_classes = [IsAuthenticated]
 
     def get(self, request):
 
