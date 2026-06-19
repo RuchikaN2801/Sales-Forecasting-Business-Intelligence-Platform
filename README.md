@@ -182,9 +182,6 @@ GET /redoc/
 
 ![Analytics](screenshots/analytics_api.png)
 
-### API Forecasting
-
-![Prophet Forecast](screenshots/api_forecast.png)
 
 ### JWT Token
 
