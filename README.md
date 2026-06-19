@@ -182,7 +182,7 @@ GET /redoc/
 
 ![Analytics](screenshots/analytics_api.png)
 
-### Prophet Forecasting
+### API Forecasting
 
 ![Prophet Forecast](screenshots/api_forecast.png)
 
