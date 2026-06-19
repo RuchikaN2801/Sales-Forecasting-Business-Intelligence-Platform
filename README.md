@@ -8,13 +8,23 @@ The platform provides secure JWT authentication, REST APIs, sales analytics, rev
 
 ---
 
-## Features
+# Sales Forecasting & Business Intelligence Platform
+
+## Project Overview
+
+A secure Django REST Framework-based Business Intelligence and Sales Forecasting platform designed to help organizations manage sales data, analyze business performance, and generate future revenue predictions using Machine Learning.
+
+The platform supports JWT Authentication, CSV-based data ingestion, analytics APIs, revenue trend monitoring, and forecasting using Prophet and XGBoost models.
+
+---
+
+## Key Features
 
 ### Authentication & Security
 
 * JWT Authentication using SimpleJWT
 * Protected API endpoints
-* Secure token-based access control
+* Token-based access control
 
 ### Sales Management
 
@@ -24,47 +34,48 @@ The platform provides secure JWT authentication, REST APIs, sales analytics, rev
 * Delete sales records
 * Automatic revenue calculation
 
-### CSV Data Upload
+### CSV Data Ingestion
 
-* Bulk sales data upload through CSV files
-* Automated database insertion
-* Revenue generation from uploaded data
+* Bulk upload sales records through CSV files
+* Automated data validation and storage
+* Revenue generation during upload
 
 ### Business Analytics
 
 * Total Revenue Analysis
 * Total Quantity Sold
 * Best Selling Product Identification
-* Product-wise Performance Tracking
+* Product Performance Tracking
 
-### Revenue Trend Analysis
+### Revenue Trend Monitoring
 
-* Historical revenue trend visualization
-* Time-series sales monitoring
+* Historical sales trend analysis
+* Revenue tracking over time
+* Time-series business insights
 
 ### Machine Learning Forecasting
 
 #### Prophet Forecasting
 
-* Time-series forecasting
 * Future revenue prediction
-* Trend analysis
+* Trend forecasting
+* Time-series analysis
 
 #### XGBoost Forecasting
 
-* Machine Learning based revenue forecasting
-* Future sales estimation
-* Predictive business analytics
+* Machine learning-based forecasting
+* Predictive revenue estimation
+* Business planning support
 
 ### API Documentation
 
-* Swagger UI Integration
+* Swagger UI
 * ReDoc Documentation
 * Interactive API Testing
 
 ---
 
-## Technology Stack
+## Tech Stack
 
 ### Backend
 
@@ -72,13 +83,13 @@ The platform provides secure JWT authentication, REST APIs, sales analytics, rev
 * Django
 * Django REST Framework
 
-### Database
-
-* SQLite
-
 ### Authentication
 
 * JWT (SimpleJWT)
+
+### Database
+
+* SQLite
 
 ### Data Processing
 
@@ -91,25 +102,25 @@ The platform provides secure JWT authentication, REST APIs, sales analytics, rev
 * XGBoost
 * Scikit-Learn
 
-### API Documentation
+### Documentation
 
 * drf-yasg (Swagger)
 
 ---
 
-## System Architecture
+## Architecture
 
 CSV Upload
 ↓
 Django REST APIs
 ↓
-Sales Database
+SQLite Database
 ↓
 Analytics Engine
 ↓
 Forecasting Models
 ↓
-Business Insights
+Business Intelligence Insights
 
 ---
 
@@ -133,10 +144,6 @@ PUT /api/sales/{id}/
 
 DELETE /api/sales/{id}/
 
-### Data Upload
-
-POST /api/upload-csv/
-
 ### Analytics
 
 GET /api/analytics/
@@ -149,6 +156,10 @@ GET /api/forecast/
 
 GET /api/xgboost-forecast/
 
+### CSV Upload
+
+POST /api/upload-csv/
+
 ### Documentation
 
 GET /swagger/
@@ -157,14 +168,40 @@ GET /redoc/
 
 ---
 
-## Project Highlights
+## Screenshots
 
-* Developed secure RESTful APIs using Django REST Framework.
-* Implemented JWT-based authentication and authorization.
-* Designed analytics APIs for revenue and product performance tracking.
-* Built machine learning forecasting pipelines using Prophet and XGBoost.
-* Created automated CSV ingestion workflow for sales data processing.
-* Integrated Swagger documentation for API testing and developer experience.
+### Swagger Documentation
+
+![Swagger UI](screenshots/swagger.png)
+
+### JWT Authentication
+
+![JWT Token](screenshots/jwt_token.png)
+
+### Analytics API
+
+![Analytics](screenshots/analytics_api.png)
+
+### Prophet Forecasting
+
+![Prophet Forecast](screenshots/prophet_forecast.png)
+
+### XGBoost Forecasting
+
+![XGBoost Forecast](screenshots/xgboost_forecast.png)
+
+---
+
+## Business Value
+
+This platform enables organizations to:
+
+* Monitor sales performance in real time
+* Identify high-performing products
+* Analyze revenue trends
+* Forecast future sales
+* Support data-driven business decisions
+* Improve strategic planning through predictive analytics
 
 ---
 
@@ -172,10 +209,10 @@ GET /redoc/
 
 * PostgreSQL Integration
 * AWS Deployment
+* Docker Containerization
 * Power BI Dashboard Integration
 * Role-Based Access Control (RBAC)
-* Automated Report Generation
-* Docker Containerization
+* Automated Reporting
 
 ---
 
