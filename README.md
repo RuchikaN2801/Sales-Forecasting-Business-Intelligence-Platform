@@ -188,7 +188,7 @@ GET /redoc/
 
 ### JWT Token
 
-![XGBoost Forecast](screenshots/jwt_token.png)
+![JWT](screenshots/jwt_authentication.png)
 
 ---
 
