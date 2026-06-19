@@ -186,9 +186,9 @@ GET /redoc/
 
 ![Prophet Forecast](screenshots/api_forecast.png)
 
-### JWT Authentication
+### JWT Token
 
-![XGBoost Forecast](screenshots/jwt_authentication.png)
+![XGBoost Forecast](screenshots/jwt_token.png)
 
 ---
 
