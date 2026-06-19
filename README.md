@@ -184,11 +184,11 @@ GET /redoc/
 
 ### Prophet Forecasting
 
-![Prophet Forecast](screenshots/prophet_forecast.png)
+![Prophet Forecast](screenshots/api_forecast.png)
 
-### XGBoost Forecasting
+### JWT Authentication
 
-![XGBoost Forecast](screenshots/xgboost_forecast.png)
+![XGBoost Forecast](screenshots/jwt_authentication.png)
 
 ---
 
