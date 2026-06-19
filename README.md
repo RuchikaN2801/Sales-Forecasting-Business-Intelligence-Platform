@@ -1,87 +1,187 @@
-# Sales Forecasting Business Intelligence Platform
+# Sales Forecasting & Business Intelligence Platform
 
-An end-to-end Business Intelligence (BI) and predictive analytics platform built with Django. The system ingests historical sales data via REST APIs, processes it through a secure backend architecture, and delivers machine learning-driven sales forecasts alongside critical financial KPIs.
-## 🏗️ System Architecture
+## Overview
 
-The data flows through the backend ecosystem following this pipeline:
+A Django REST Framework based Sales Forecasting and Business Intelligence Platform that enables organizations to ingest sales data, perform business analytics, and generate future revenue forecasts using Machine Learning models.
 
+The platform provides secure JWT authentication, REST APIs, sales analytics, revenue trend monitoring, CSV-based bulk data upload, and forecasting using Prophet and XGBoost.
 
-  Django Project
-        │
-        ▼
-  SQLite Database
-        │
-        ▼
-   Sales Model
-        │
-        ▼
-  Django Admin Panel
-        │
-        ▼
-    Serializer
-        │
-        ▼
-    REST API
+---
 
-## 🛠️ Tech Stack
+## Features
 
-* Backend Framework: Django, Django REST Framework (DRF)
-* Database: SQLite (Development/Default)
-* Authentication: Simple JWT (JSON Web Tokens)
-* Machine Learning / Analytics: Prophet, XGBoost, Pandas, NumPy
+### Authentication & Security
 
+* JWT Authentication using SimpleJWT
+* Protected API endpoints
+* Secure token-based access control
 
-## 🔌 API Documentation & Endpoints
+### Sales Management
 
-All core data endpoints require valid **JWT Authentication**. Secure your requests by including the token in your headers: `Authorization: Bearer <your_token>`.
+* Create sales records
+* View sales records
+* Update sales records
+* Delete sales records
+* Automatic revenue calculation
 
-### 📦 Core Sales Operations
+### CSV Data Upload
 
-* `GET /api/sales/` - Retrieves a paginated list of all historical sales records.
-* `POST /api/sales/` - Handles bulk **CSV upload** to easily ingest high-volume historical transactions into the database.
+* Bulk sales data upload through CSV files
+* Automated database insertion
+* Revenue generation from uploaded data
 
-### 📊 Business Intelligence & Analytics
+### Business Analytics
 
-* `GET /api/sales/analytics/` - Provides parsed, aggregated data points optimized for rendering charts and trendlines.
-* `GET /api/sales/revenue-kpi/` - Exposes high-level metrics (Total Revenue, Gross Profit Margin, MoM Growth) to feed front-end BI scorecards.
+* Total Revenue Analysis
+* Total Quantity Sold
+* Best Selling Product Identification
+* Product-wise Performance Tracking
 
-### 🔮 Machine Learning Forecasting
+### Revenue Trend Analysis
 
-* `GET /api/sales/forecast/prophet/` - Generates time-series predictions leveraging Meta's **Prophet** model to capture seasonality and holiday trends.
-* `GET /api/sales/forecast/xgboost/` - Generates high-performance regression-based sales forecasts utilizing structural features with **XGBoost**.
+* Historical revenue trend visualization
+* Time-series sales monitoring
 
+### Machine Learning Forecasting
 
-## 📁 Project Structure
+#### Prophet Forecasting
 
-```text
-├── core_project/          # Django project configuration settings
-├── sales_api/             # Core application directory
-│   ├── models.py          # Sales Model schema definitions
-│   ├── serializers.py     # Serializers for transforming DB queries to JSON
-│   ├── views.py           # API views handling business & ML logic
-│   └── urls.py            # Routing for /api/sales/* endpoints
-├── data/                  # Sample data and CSV templates
-├── requirements.txt       # Python library dependencies
-└── README.md              # Project documentation
+* Time-series forecasting
+* Future revenue prediction
+* Trend analysis
 
+#### XGBoost Forecasting
 
-## ⚙️ Quick Start
+* Machine Learning based revenue forecasting
+* Future sales estimation
+* Predictive business analytics
 
-1. Clone & Set Up Environment
-git clone https://github.com/RuchikaN2801/Sales-Forecasting-Business-Intelligence-Platform.git
-cd Sales-Forecasting-Business-Intelligence-Platform
+### API Documentation
 
-1.1 Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows use: venv\Scripts\activate
+* Swagger UI Integration
+* ReDoc Documentation
+* Interactive API Testing
 
-2. Install Dependencies
-pip install -r requirements.txt
+---
 
-3. Initialize Database & Admin
-python manage.py migrate
-python manage.py createsuperuser  # Access the Django Admin Panel here
+## Technology Stack
 
-4. Run the Server
-python manage.py runserver
+### Backend
 
+* Python
+* Django
+* Django REST Framework
+
+### Database
+
+* SQLite
+
+### Authentication
+
+* JWT (SimpleJWT)
+
+### Data Processing
+
+* Pandas
+* NumPy
+
+### Machine Learning
+
+* Prophet
+* XGBoost
+* Scikit-Learn
+
+### API Documentation
+
+* drf-yasg (Swagger)
+
+---
+
+## System Architecture
+
+CSV Upload
+↓
+Django REST APIs
+↓
+Sales Database
+↓
+Analytics Engine
+↓
+Forecasting Models
+↓
+Business Insights
+
+---
+
+## API Endpoints
+
+### Authentication
+
+POST /api/token/
+
+POST /api/token/refresh/
+
+### Sales Management
+
+GET /api/sales/
+
+POST /api/sales/
+
+GET /api/sales/{id}/
+
+PUT /api/sales/{id}/
+
+DELETE /api/sales/{id}/
+
+### Data Upload
+
+POST /api/upload-csv/
+
+### Analytics
+
+GET /api/analytics/
+
+GET /api/revenue-trend/
+
+### Forecasting
+
+GET /api/forecast/
+
+GET /api/xgboost-forecast/
+
+### Documentation
+
+GET /swagger/
+
+GET /redoc/
+
+---
+
+## Project Highlights
+
+* Developed secure RESTful APIs using Django REST Framework.
+* Implemented JWT-based authentication and authorization.
+* Designed analytics APIs for revenue and product performance tracking.
+* Built machine learning forecasting pipelines using Prophet and XGBoost.
+* Created automated CSV ingestion workflow for sales data processing.
+* Integrated Swagger documentation for API testing and developer experience.
+
+---
+
+## Future Enhancements
+
+* PostgreSQL Integration
+* AWS Deployment
+* Power BI Dashboard Integration
+* Role-Based Access Control (RBAC)
+* Automated Report Generation
+* Docker Containerization
+
+---
+
+## Author
+
+Ruchika Navrange
+
+LinkedIn:
+https://www.linkedin.com/in/ruchika-navrange-935a04257
