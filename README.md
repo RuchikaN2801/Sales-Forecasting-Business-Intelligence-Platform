@@ -1,15 +1,5 @@
 # Sales Forecasting & Business Intelligence Platform
 
-## Overview
-
-A Django REST Framework based Sales Forecasting and Business Intelligence Platform that enables organizations to ingest sales data, perform business analytics, and generate future revenue forecasts using Machine Learning models.
-
-The platform provides secure JWT authentication, REST APIs, sales analytics, revenue trend monitoring, CSV-based bulk data upload, and forecasting using Prophet and XGBoost.
-
----
-
-# Sales Forecasting & Business Intelligence Platform
-
 ## Project Overview
 
 A secure Django REST Framework-based Business Intelligence and Sales Forecasting platform designed to help organizations manage sales data, analyze business performance, and generate future revenue predictions using Machine Learning.
